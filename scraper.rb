@@ -17,6 +17,7 @@ File.open('electronic.html', 'w') do |f|
 	f.puts("<html>")
 	f.puts("<head>")
 	f.puts("<LINK href=\"css/test.css\" rel=\"stylesheet\" type=\"text/css\">")
+	f.puts("<meta charset=\"UTF-8\">")
 	# f.puts("<LINK href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">")
 	f.puts("")
 	f.puts("")
@@ -32,6 +33,8 @@ File.open('electronic.html', 'w') do |f|
 	electronics.each do |electronic|
 		f.puts("<li>" + electronic.inner_html + "</li>")
 	end
+	
+
 
 	f.puts("</ul>")
 	f.puts("</body>\n")
