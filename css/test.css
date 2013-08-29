@@ -1,0 +1,29 @@
+body, head {
+	width: 1330px;
+	background-color: black;
+	color: white;
+	font-family: tahoma;
+	font-variant: small-caps;
+}
+
+ul {
+	list-style: none;
+}
+
+.image {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.name {
+	position: absolute; 
+	z-index: 2; 
+	margin-left: -120px;
+	width: 100px;
+	margin-top: 85px;
+	color: white;
+	text-shadow: 2px 2px #1f1f1f;
+	text-align: center;
+}
+

@@ -6,7 +6,6 @@ pages = []
 electronics = []
 
 1.upto(10) do |x|
-	# x.to_s.gsub!(/"num"/, "x")
 	pages << Nokogiri::HTML(open("http://www.last.fm/music/+geo/canada/electronic?page=#{x}"))
 end
 
@@ -17,8 +16,8 @@ end
 File.open('electronic.html', 'w') do |f|
 	f.puts("<html>")
 	f.puts("<head>")
-	f.puts("<LINK href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">")
-	f.puts("<LINK href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">")
+	f.puts("<LINK href=\"css/test.css\" rel=\"stylesheet\" type=\"text/css\">")
+	# f.puts("<LINK href=\"css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">")
 	f.puts("")
 	f.puts("")
 	f.puts("")
@@ -31,7 +30,7 @@ File.open('electronic.html', 'w') do |f|
 	f.puts("<ul>")
 
 	electronics.each do |electronic|
-		f.puts("<li>" + electronic.text + "</li>")
+		f.puts("<li>" + electronic.inner_html + "</li>")
 	end
 
 	f.puts("</ul>")
