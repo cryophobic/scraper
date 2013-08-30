@@ -1,73 +1,308 @@
-body, head {
-	width: 1330px;
-	background-color: black;
-	color: white;
-	font-family: tahoma;
-	font-variant: small-caps;
+html,
+body {
+    width:100%; /* Needed to avoid a redrawing bug in Firefox when resizing windows */
+    height:100%;
+}
+body {
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+	/*background:url(images/darkwood.jpeg);	*/
+	font-family: 'Playfair Display', serif;	
+	margin-left:-0.1%;
+}
+#body {
+    -webkit-box-flex:1;
+    -moz-box-flex:1; /* Needed to make this element flexible in Firefox */
+    box-flex:1;
+    max-width:82em;
+    margin:0, auto;
+	width:auto;
+	/*background-color:#71eeb8;*/
 }
 
-ul {
-	list-style: none;
+
+	
+.topframe {
+	border:1px solid #666;
+	-moz-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
+	border-radius:10px;
+	height:70px;
+	width:auto;
+	background:url(images/vichy.png);
+	background-position:top;
+	}
+	
+#content {
+	border:1px solid #666;
+	margin-top:20px;
+	-moz-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
+	border-radius:10px;
+	height:580px;
+	width:auto;
+	background:url(images/vichy.png);
+	background-position:center;
+	color:#999999; 
+		}
+	
+#content a {
+	text-decoration:none;
+	color:#999999;
+}
+	
+#content a:hover {
+	text-decoration:none;
+	color:#FF9900;
+	}
+	
+.areyou {
+	
+	margin-top:50px;
+	
+	margin-left:90px;
+	
+	/* Safari */
+	-webkit-transform: rotate(-9deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-9deg);
+
+	/* IE */
+	-ms-transform: rotate(-9deg);
+
+	/* Opera */
+	-o-transform: rotate(-9deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+	font-size:56px;
+	text-shadow: 2px 2px 2px #000;
+	}
+	
+.hirecc {
+	
+	margin-top:60px;
+	
+	margin-left:80px;
+	
+	/* Safari */
+	-webkit-transform: rotate(-9deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-9deg);
+
+	/* IE */
+	-ms-transform: rotate(-9deg);
+
+	/* Opera */
+	-o-transform: rotate(-9deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	
+	font-size:112px;
+	text-shadow: 2px 2px 2px #000;
+	}
+	
+.readon {
+	
+	margin-right:100px;
+	
+	margin-top:70px;
+	
+	/* Safari */
+	-webkit-transform: rotate(-9deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-9deg);
+
+	/* IE */
+	-ms-transform: rotate(-9deg);
+
+	/* Opera */
+	-o-transform: rotate(-8deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	
+	font-size:56px;
+	
+	text-align:right;
+	text-shadow: 2px 2px 2px #000;
+	}
+	
+.bottom {
+	border:1px solid #666;
+	margin-top:20px;
+	-moz-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
+	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
+	border-radius:10px;
+	height:68px;
+	width:auto;
+	background:url(images/vichy.png);
+	background-position:bottom;
+	}
+	
+.bottomtext {
+	font-size:24px;
+	color:#999999;
+	text-shadow: 0px 2px 3px #000;
+	}
+	
+#menu-css li {  
+    display: inline;  
+    list-style: none;
+	font-size:20px;
+}  
+  
+#menu-css li a {  
+  
+   /* Border Radius */  
+    -webkit-border-radius: 10px;  
+    -moz-border-radius: 10px;  
+    border-radius: 10px;  
+  
+   /* Border Shadow */   
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.6); 
+  
+    color: #ffffff;  
+    background: rgba(0,0,0,0.2);  
+    display: inline-block;  
+    padding: 5px 15px;  
+    outline: none;  
+    text-decoration: none;  
 }
 
-h1 {
-	text-align: right;
-	margin-right: 30px;
+#menu-css li a:hover {  
+    background: rgba(0,0,0,0.7);  
+    padding: 5px 25px;  
+}  
+  
+#menu-css li a:active {  
+    background: rgba(0,0,0,0.1);  
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
 }
 
-.image {
-	width: 100%;
-	position: relative;
-	z-index: 1;
+#menu-css li a {  
+  
+    /* Animation (Webkit, Gecko & Mozilla) */  
+    -webkit-transition-duration: 0.20s;  
+    -webkit-transition-timing-function: ease-out;  
+    -moz-transition-duration: 0.20s;  
+    -moz-transition-timing-function: ease-out;  
 }
 
-.name {
-	position: absolute; 
-	z-index: 2; 
-	margin-left: -120px;
-	width: 100px;
-	margin-top: 85px;
-	color: white;
-	text-shadow: 2px 2px #1f1f1f;
-	text-align: center;
-}
-
-wrap {
-      overflow: hidden;
-      margin: 10px;
-    }
-    .box {
-      float: left;
-      position: relative;
-      width: 10%;
-      padding-bottom: 100%;
-    }
-
- @media only screen and (max-width : 480px) {
-      /* Smartphone view: 1 tile */
-      .box {
-        width: 100%;
-        padding-bottom: 100%;
-      }
-    }
-    @media only screen and (max-width : 650px) and (min-width : 481px) {
-      /* Tablet view: 2 tiles */
-      .box {
-        width: 50%;
-        padding-bottom: 50%;
-      }
-    }
-    @media only screen and (max-width : 1050px) and (min-width : 651px) {
-      /* Small desktop / ipad view: 3 tiles */
-      .box {
-        width: 33.3%;
-        padding-bottom: 33.3%;
-      }
-    }
-    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
-      /* Medium desktop: 4 tiles */
-      .box {
-        width: 15%;
-        padding-bottom: 15%;
-      }
-
+#menu-css li {  
+    display: inline;  
+    list-style: none;  
+}  
+  
+#menu-css li a {  
+  
+    /* Border Radius */ 
+    -webkit-border-radius: 10px;  
+    -moz-border-radius: 10px;  
+    border-radius: 10px;  
+  
+    /* Border Shadow */   
+    -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.7);  
+    -moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.7);  
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.7);  
+  
+    /* Animation (Webkit, Gecko & Mozilla) */  
+    -webkit-transition-duration: 0.20s;  
+    -webkit-transition-timing-function: ease-out;  
+    -moz-transition-duration: 0.20s;  
+    -moz-transition-timing-function: ease-out;  
+  
+    color: #ffffff;  
+    background: rgba(0,0,0,0.3);  
+    display: inline-block;  
+    padding: 5px 15px;  
+    outline: none;  
+    text-decoration: none;  
+}  
+  
+    #menu-css li a:hover {  
+        background: rgba(0,0,0,0.5);  
+        padding: 5px 25px;  
+    }  
+  
+    #menu-css li a:active {  
+        background: rgba(0,0,0,0.1);  
+        -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
+        -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.4);  
+    } 
+	
+#frame {
+	width:100%;
+	height:100%;
+	font-size:22px;
+	color:#333333;
+	border-radius:10px;
+	float:right;
+	/*background: rgb(102, 102, 102); /* Fall-back for browsers that don't
+                                    support rgba */
+    /*background: rgba(102, 102, 102, .2);*/
+	overflow:auto;
+	} 
+	
+#frame li {
+	line-height: 1.6;
+	
+	}
+	
+.infobox {
+	width:38%;
+	height:100%;
+	border-radius:10px;
+	float:left;
+	}
+	
+.infobox h1 {
+	font-size:32px;
+	}
+	
+.chrisbox {
+	width:24%;
+	height:100%;
+	border-radius:10px;
+	float:right;
+	position:relative;
+	color:#999999;
+	}
+	
+.nav {
+	text-align:right;
+	position:absolute; bottom: 0; right: 0; 
+	}
+	
+.head {
+	text-align:center;
+	}
+	
+h3 {
+	color:#0099CC;
+	
+	}
+	
+.head h3 {
+	color:#333333;
+	}
